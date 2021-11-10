@@ -1,22 +1,27 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <Title :title="text" />
+    <Title :titleText= "textTitle" />
+    <!-- <Hero titleJumbotron= "Jumbotron"/> -->
+    <Hero :titleJumbotron = "textHero"/>
   </div>
 </template>
 
 <script>
 import Title from './components/Title.vue'
+import Hero from './components/Hero.vue'
 
 export default {
   name: 'App',
   data(){
     return {
-      text: "Ciao Vue"
+      textTitle: "La mia prima app con Vue CLI!",
+      textHero: "Jumbotron"
     }
   },
   components: {
-    Title
+    Title,
+    Hero
   }
 }
 </script>
